@@ -320,6 +320,37 @@ html {
     min-width: 100%;
     margin-bottom: 1.5rem;
   }
+    .project-grid.two-columns {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    padding: 2rem 1rem;
+  }
+
+  .project-grid.three-columns {
+    grid-template-columns: 1fr; /* Also 1 column on mobile */
+    padding: 2rem 1rem;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .navbar__links ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .scroll-down {
+    font-size: 2rem;
+  }
+
 }
 .buy-btn {
   background-color: #3885ff;
