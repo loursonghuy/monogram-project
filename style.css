@@ -1,0 +1,323 @@
+/* NAVIGATION BAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #0c1e3b; /* Dark blue */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+}
+
+.navbar__logo img {
+  height: 50px;
+  width: auto;
+}
+
+.navbar__links ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;  
+  flex-wrap: nowrap;
+}
+
+.navbar__links a {
+  white-space: nowrap;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+.navbar__links {
+  display: flex;
+  margin-left: 2rem;
+  flex-shrink: 0;
+}
+
+.navbar__links a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.navbar__actions select {
+  padding: 0.3rem;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1200;
+}
+
+.cart-icon {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .navbar__links {
+    margin-left: 1rem;
+    overflow-x: auto;  /* allow horizontal scroll if too wide */
+  }
+}
+
+.hero {
+  height: 500px; /* Adjust height as needed */
+  background-image: url(hero-bg.jpg); /* Put your image path here */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4e3d7; /* Light color for text */
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.scroll-down {
+  display: inline-block;
+  font-size: 3.5rem;
+  color: white;
+  margin: 2rem auto 0;
+  text-decoration: none;
+  animation: bounce 2s infinite;
+}
+
+.scroll-down:hover {
+  opacity: 0.6;
+}
+
+/* optional bouncing animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+.project-grid.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem; /* bigger gap */
+  padding: 3rem 2rem;
+  max-width: 850px; /* wider container */
+  margin: 0 auto;
+}
+.project-grid.three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-grid.three-columns .project-card {
+  padding-bottom: 3rem;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.project-card {
+  background-color: white; /* or your preferred bg */
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  color: #1c2237; /* dark text color */
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;  /* vertical layout */
+  align-items: center;
+  justify-content: center; /* center content */
+  max-width: 380px;
+  margin: 0 auto;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+.project-grid.two-columns .project-card {
+  max-width: 400px;    /* wider for 2-column */
+  padding-bottom: 3rem; /* enough space for price */
+}
+.project-grid.three-columns .project-card {
+  max-width: 280px;    /* narrower for 3-column */
+  padding-bottom: 4rem; /* a bit more for overlap safety */
+}
+
+
+.project-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  object-fit: contain; /* maintain aspect ratio */
+}
+
+.project-card h3 {
+  margin: 0.5rem 0 0.75rem 0;
+  font-size: 1.5rem;
+  color: #0c1e3b; /* dark blue */
+  font-weight: 700;
+}
+
+.project-card p {
+  margin: 0.5rem 0 2rem 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #606060; /* medium gray for description */
+  line-height: 1.4;
+}
+
+.project-card .price {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #3885ff;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+.big-image-section {
+  margin: 3rem 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.big-image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.big-image-section:hover img {
+  transform: scale(1.05); /* zoom effect */
+}
+.product-wrapper {
+  background: linear-gradient(to bottom, #bcb7b7 0%, #9d9c9c 100%);
+  padding: 4rem 0;
+}
+
+.footer {
+  background-color: #1a2456;
+  color: #f0efed;
+  padding: 3rem 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  color: #ff8b68;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+  color: #f0efed;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ff8b68;
+}
+
+.footer-column .social-icon {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #f0efed;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-column .social-icon:hover {
+  color: #ff8b68;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-column {
+    min-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
