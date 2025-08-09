@@ -321,3 +321,18 @@ html {
     margin-bottom: 1.5rem;
   }
 }
+.buy-btn {
+  background-color: #3885ff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;  /* pushes button down if needed */
+}
+
+.buy-btn:hover {
+  background-color: #2b66cc;
+}
