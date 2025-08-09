@@ -1,4 +1,8 @@
 /* NAVIGATION BAR */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -311,6 +315,24 @@ html {
 }
 
 @media (max-width: 768px) {
+  .navbar__links ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .navbar__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__actions select {
+  max-width: 100px; 
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
   .footer-container {
     flex-direction: column;
     align-items: center;
